@@ -18,12 +18,12 @@ class App extends React.Component {
         var url = 'http://jbvapi.eggsdesign.tech/rails/1?type=bane&_format=json&descendants=direct&excludeSelf=true';
         
         Request.get(url).then((data) => {
-            var arr = _.filter(data.body.data.rails, function(o) {
+            var railList = _.filter(data.body.data.rails, function(o) {
                 return _.includes(o.title, query);
             });
             
             this.setState({
-                rails: arr
+                rails: railList
             });
         });
         console.log(query); //Test input(query) in console
