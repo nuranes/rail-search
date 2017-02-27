@@ -23,8 +23,7 @@ class App extends React.Component {
             });
             
             this.setState({
-                rails: arr,
-                total: arr
+                rails: arr
             });
         });
         console.log(query); //Test input(query) in console
